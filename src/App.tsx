@@ -1,4 +1,3 @@
-import { useState, useEffect } from 'react'
 import DamageCalculator from './components/DamageCalculator'
 import './App.css'
 

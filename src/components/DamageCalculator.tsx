@@ -47,7 +47,7 @@ function calculateDamage(values: CalculationValues): CalculationResults {
 }
 
 function DamageCalculator() {
-  const [values, setValues] = useState<CalculationValues>(DEFAULT_VALUES)
+  const [_, setValues] = useState<CalculationValues>(DEFAULT_VALUES)
   const [inputStrings, setInputStrings] = useState<Record<keyof CalculationValues, string>>({
     hp: '10',
     shield: '2',
