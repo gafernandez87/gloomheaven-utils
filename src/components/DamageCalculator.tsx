@@ -128,24 +128,23 @@ function DamageCalculator() {
         <div className="input-card">
           <div className="card-glow"></div>
           <div className="card-content">
-            <div className="input-group">
-              <label htmlFor="hp" className="input-label">
-                <span className="label-icon">❤️</span>
-                Current HP
-              </label>
-              <input
-                id="hp"
-                type="number"
-                min="0"
-                step="1"
-                value={inputStrings.hp}
-                onChange={(e) => handleInputChange('hp', e.target.value)}
-                className="gamer-input"
-                placeholder="10"
-              />
-            </div>
-
             <div className="input-row">
+            <div className="input-group">
+                  <label htmlFor="hp" className="input-label">
+                    <span className="label-icon">❤️</span>
+                    Current HP
+                  </label>
+                  <input
+                    id="hp"
+                    type="number"
+                    min="0"
+                    step="1"
+                    value={inputStrings.hp}
+                    onChange={(e) => handleInputChange('hp', e.target.value)}
+                    className="gamer-input"
+                    placeholder="10"
+                  />
+                </div>
               <div className="input-group">
                 <label htmlFor="shield" className="input-label">
                   <span className="label-icon">🛡️</span>
@@ -160,6 +159,25 @@ function DamageCalculator() {
                   onChange={(e) => handleInputChange('shield', e.target.value)}
                   className="gamer-input"
                   placeholder="2"
+                />
+              </div>
+            </div>
+
+            <div className="input-row">
+              <div className="input-group">
+                <label htmlFor="attack" className="input-label">
+                  <span className="label-icon">⚔️</span>
+                  Attack Damage
+                </label>
+                <input
+                  id="attack"
+                  type="number"
+                  min="0"
+                  step="1"
+                  value={inputStrings.attack}
+                  onChange={(e) => handleInputChange('attack', e.target.value)}
+                  className="gamer-input"
+                  placeholder="3"
                 />
               </div>
               <div className="input-group">
@@ -180,33 +198,6 @@ function DamageCalculator() {
               </div>
             </div>
 
-            <div className="input-group">
-              <label htmlFor="attack" className="input-label">
-                <span className="label-icon">⚔️</span>
-                Attack Damage (already modified)
-              </label>
-              <input
-                id="attack"
-                type="number"
-                min="0"
-                step="1"
-                value={inputStrings.attack}
-                onChange={(e) => handleInputChange('attack', e.target.value)}
-                className="gamer-input"
-                placeholder="3"
-              />
-            </div>
-
-            <div className="button-row">
-              <button
-                onClick={handleReset}
-                className="gamer-button secondary"
-                type="button"
-              >
-                <span>🔄</span>
-                Reset
-              </button>
-            </div>
 
             {warnings.length > 0 && (
               <div className="warning-box">
